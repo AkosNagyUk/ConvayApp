@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convay's Game of Life - Display</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="display-page">
+    <main class="display-frame">
+      <canvas id="board" class="display-canvas" aria-label="Game of Life display"></canvas>
+
+      <section id="notice" class="glass-panel notice" aria-live="polite"></section>
+
+      <button id="legend-toggle" class="glass-panel legend-toggle" type="button" aria-controls="legend-panel">
+        Hide Panel
+      </button>
+
+      <section id="legend-panel" class="glass-panel legend" aria-label="Keyboard shortcuts">
+        <h1>Display Mode</h1>
+        <p>Shared simulation view for the network. Open <strong>/interact</strong> on another device to drop patterns onto the live grid.</p>
+        <div class="legend-qr">
+          <a id="interact-link" class="legend-qr-link" href="/interact">
+            <img id="interact-qr" class="legend-qr-image" src="/api/interact-qr.svg" alt="QR code for interact mode" />
+          </a>
+          <div class="legend-qr-copy">
+            <strong>Open Interact Mode</strong>
+            <a id="interact-link-text" class="legend-qr-text" href="/interact">/interact</a>
+          </div>
+        </div>
+        <ul>
+          <li><strong>[</strong> slower simulation</li>
+          <li><strong>]</strong> faster simulation</li>
+          <li><strong>-</strong> smaller cells</li>
+          <li><strong>=</strong> larger cells</li>
+          <li><strong>R</strong> randomize the grid</li>
+          <li><strong>C</strong> clear the grid</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="/display.js" defer></script>
+  </body>
+</html>

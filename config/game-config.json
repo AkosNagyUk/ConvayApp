@@ -1,0 +1,8 @@
+{
+  "cellSize": 14,
+  "speed": 160,
+  "defaultColumns": 64,
+  "defaultRows": 36,
+  "randomFillRatio": 0.24,
+  "notificationDurationMs": 2200
+}

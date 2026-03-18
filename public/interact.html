@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convay's Game of Life - Interact</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="glass-panel interact-card">
+        <div class="interact-layout">
+          <aside class="preview-panel">
+            <div class="interact-title">Interact Mode</div>
+            <p class="interact-copy">Browse built-in patterns, preview them, and drop them onto the shared display at a random position.</p>
+
+            <div class="preview-canvas-wrap">
+              <canvas id="structure-preview" class="preview-canvas" aria-label="Selected structure preview"></canvas>
+            </div>
+
+            <div class="preview-actions">
+              <div class="preview-nav">
+                <button id="previous-button" class="button" type="button">Previous</button>
+                <button id="next-button" class="button" type="button">Next</button>
+              </div>
+              <button id="generate-button" class="button button-primary preview-generate" type="button">Generate</button>
+            </div>
+          </aside>
+
+          <div class="control-stack">
+            <section class="control-panel">
+              <h1 id="structure-name" class="structure-name">Loading</h1>
+              <p id="structure-description" class="structure-description">Fetching available structures from the server.</p>
+
+              <div class="meta-pills">
+                <span class="meta-pill"><strong id="structure-size">-</strong></span>
+                <span class="meta-pill"><strong id="structure-cells">-</strong></span>
+              </div>
+            </section>
+
+            <section class="control-panel">
+              <div class="interact-title">Live Grid</div>
+
+              <div class="status-strip">
+                <div class="status-card">
+                  <span class="stat-label">Grid</span>
+                  <span id="grid-size" class="stat-value">-</span>
+                </div>
+                <div class="status-card">
+                  <span class="stat-label">Generation</span>
+                  <span id="generation-count" class="stat-value">-</span>
+                </div>
+                <div class="status-card">
+                  <span class="stat-label">Live Cells</span>
+                  <span id="live-cells" class="stat-value">-</span>
+                </div>
+                <div class="status-card">
+                  <span class="stat-label">Timing</span>
+                  <span id="timing-info" class="stat-value">-</span>
+                </div>
+              </div>
+
+              <div id="toast" class="toast" aria-live="polite"></div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/interact.js" defer></script>
+  </body>
+</html>
